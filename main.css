@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  max-width: 100%;
+}
+
 :root {
   --primary-color: #6c63ff;
   --secondary-color: #f5f5f5;
@@ -54,6 +58,11 @@ html {
   pointer-events: none;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+@media (max-width: 500px) {
+  #scroll {
+    right: 50px;
+  }
 }
 
 #scroll.show {
@@ -112,6 +121,7 @@ button {
 @media (max-width: 500px) {
   .header {
     box-shadow: 0 0 0 0;
+    padding: 5px 10px;
   }
 }
 .header .container {
@@ -122,6 +132,11 @@ button {
 
 .header .container .image {
   width: 200px;
+}
+@media (max-width: 500px) {
+  .header .container .image {
+    width: 150px;
+  }
 }
 
 .header .container .image img {
@@ -144,6 +159,13 @@ button {
   border-radius: 10px;
   display: none;
 }
+@media (max-width: 500px) {
+  .open_menu {
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+  }
+}
 .close_menu {
   position: absolute;
   top: 40px;
@@ -162,9 +184,15 @@ button {
 }
 
 .menu {
-  display: flex;
   gap: 50px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .menu {
+    gap: 30px;
+  }
 }
 @media (max-width: 900px) {
   .header .container .links {
@@ -264,7 +292,6 @@ button {
 /* start intro */
 .intro {
   background: #ececec;
-  min-height: calc(100vh - 130px);
   height: auto;
   padding-bottom: 40px;
 }
@@ -279,6 +306,11 @@ button {
   margin-top: 70px;
   align-items: center;
   width: 60%;
+}
+@media (max-width: 500px) {
+  .intro .text {
+    margin-top: 30px;
+  }
 }
 
 .intro .text h2 {
@@ -299,6 +331,20 @@ button {
 @media (max-width: 800px) {
   .intro .text p {
     width: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .intro .text {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .intro .text p {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .intro .text h2 {
+    width: 100%;
   }
 }
 
@@ -323,7 +369,7 @@ button {
 }
 
 @media (max-width: 767px) {
-  .intro .image img {
+  .intro .image {
     display: none;
   }
 }
@@ -420,6 +466,11 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .offers .container .ban {
+    padding: 10px;
+  }
 }
 
 .offers .container .ban img {
@@ -850,7 +901,6 @@ button {
 /* start footer */
 .footer {
   background: black;
-  min-height: calc(100vh - 150px);
   height: auto;
 }
 .footer .container {
